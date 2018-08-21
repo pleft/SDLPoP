@@ -2256,7 +2256,7 @@ void __pascal far set_gr_mode(byte grmode) {
 	//SDL_EnableUNICODE(1); //deprecated
 	Uint32 flags = 0;
 	if (!start_fullscreen) start_fullscreen = check_param("full") != NULL;
-	if (start_fullscreen) flags |= SDL_WINDOW_FULLSCREEN_DESKTOP;
+	if (start_fullscreen) flags |= SDL_WINDOW_FULLSCREEN;
 	flags |= SDL_WINDOW_RESIZABLE;
 	flags |= SDL_WINDOW_ALLOW_HIGHDPI; // for Retina displays
 
