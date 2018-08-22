@@ -3002,6 +3002,7 @@ void process_events() {
 						case SDL_SCANCODE_VOLUMEUP:
 						case SDL_SCANCODE_VOLUMEDOWN:
 						case SDL_SCANCODE_PAUSE:
+						case SDL_SCANCODE_J:
 							break;
 
 						default:
@@ -3033,6 +3034,7 @@ void process_events() {
 						case SDL_SCANCODE_KP_7:
 						case SDL_SCANCODE_KP_8:
 						case SDL_SCANCODE_KP_9:
+						case SDL_SCANCODE_J:
 							if (!is_keyboard_mode) {
 								is_keyboard_mode = 1;
 								is_joyst_mode = 0;

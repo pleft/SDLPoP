@@ -470,8 +470,7 @@ void check_quick_op() {
 
 Uint32 temp_shift_release_callback(Uint32 interval, void *param) {
 	const Uint8* state = SDL_GetKeyboardState(NULL);
-	if (state[SDL_SCANCODE_LSHIFT]) key_states[SDL_SCANCODE_LSHIFT] = 1;
-	if (state[SDL_SCANCODE_RSHIFT]) key_states[SDL_SCANCODE_RSHIFT] = 1;
+	if (state[SDL_SCANCODE_J]) key_states[SDL_SCANCODE_J] = 1;
 	return 0; // causes the timer to be removed
 }
 
@@ -620,8 +619,7 @@ int __pascal far process_key() {
 			if (current_level < custom->shift_L_allowed_until_level /* 4 */ || cheats_enabled) {
 				// if shift is not released within the delay, the cutscene is skipped
 				Uint32 delay = 250;
-				key_states[SDL_SCANCODE_LSHIFT] = 0;
-				key_states[SDL_SCANCODE_RSHIFT] = 0;
+				key_states[SDL_SCANCODE_J] = 0;
 				SDL_TimerID timer;
 				timer = SDL_AddTimer(delay, temp_shift_release_callback, NULL);
 				if (timer == 0) {
@@ -1540,7 +1538,7 @@ void __pascal far read_keyb_control() {
 	) {
 		control_x = 1;
 	}
-	control_shift = -(key_states[SDL_SCANCODE_LSHIFT] || key_states[SDL_SCANCODE_RSHIFT]);
+	control_shift = -(key_states[SDL_SCANCODE_J]);
 
 	#ifdef USE_DEBUG_CHEATS
 	if (cheats_enabled && debug_cheats_enabled) {
@@ -2115,16 +2113,15 @@ void show_splash() {
 			joy_AY_buttons_state = 0;
 			joy_X_button_state = 0;
 			joy_B_button_state = 0;
-			key_states[SDL_SCANCODE_LSHIFT] = 1; // close the splash screen using the gamepad
+			key_states[SDL_SCANCODE_J] = 1; // close the splash screen using the gamepad
 		}
 		delay_ticks(1);
 
-	} while(key == 0 && !(key_states[SDL_SCANCODE_LSHIFT] || key_states[SDL_SCANCODE_RSHIFT]));
+	} while(key == 0 && !(key_states[SDL_SCANCODE_J]));
 
 	if ((key & WITH_CTRL) || (enable_quicksave && key == SDL_SCANCODE_F9) || (enable_replay && key == SDL_SCANCODE_TAB)) {
 		extern int last_key_scancode; // defined in seg009.c
 		last_key_scancode = key; // can immediately do Ctrl+L, etc from the splash screen
 	}
-	key_states[SDL_SCANCODE_LSHIFT] = 0; // don't immediately start the game if shift was pressed!
-	key_states[SDL_SCANCODE_RSHIFT] = 0;
+	key_states[SDL_SCANCODE_J] = 0; // don't immediately start the game if shift was pressed!
 }
