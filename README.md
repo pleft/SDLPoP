@@ -26,7 +26,7 @@ data/  doc/  mods/  prince  README.md  SDLPoP.ini  src/
 4. Create a launcher shortcut for prince executable to be able to launch it through the GameShell's menu
 
 ```
-echo /home/cpi/SDLPop/prince full > /home/cpi/apps/launcher/Menu/GameShell/Prince.sh
+echo /home/cpi/SDLPoP/prince full > /home/cpi/apps/launcher/Menu/GameShell/Prince.sh
 chmod +x /home/cpi/apps/launcher/Menu/GameShell/Prince.sh
 ```
 
