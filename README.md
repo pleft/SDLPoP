@@ -27,6 +27,7 @@ data/  doc/  mods/  prince  README.md  SDLPoP.ini  src/
 
 ```
 echo /home/cpi/SDLPop/prince full > /home/cpi/apps/launcher/Menu/GameShell/Prince.sh
+chmod +x /home/cpi/apps/launcher/Menu/GameShell/Prince.sh
 ```
 
 5. Reboot GameShell and start Prince Of Persia by selecting the Prince icon
