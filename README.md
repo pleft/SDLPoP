@@ -15,10 +15,10 @@ More info: doc/Readme.txt
    cd src
    make all
    ```
-3. If compilation succeeds, in `SDLPop/` directory there should be an executable file named `prince`
+3. If compilation succeeds, in `SDLPoP/` directory there should be an executable file named `prince`
 
 ```
-cd /home/cpi/SDLPop
+cd /home/cpi/SDLPoP
 ls
 data/  doc/  mods/  prince  README.md  SDLPoP.ini  src/
 ```
