@@ -1,8 +1,8 @@
+![alt text](Prince.png "Prince of Persia")
 # SDLPoP
 An open-source port of Prince of Persia, based on the disassembly of the DOS version.
 
 More info: doc/Readme.txt
-
 
 ## To build for GameShell
 
@@ -30,7 +30,12 @@ echo /home/cpi/SDLPoP/prince full > /home/cpi/apps/launcher/Menu/GameShell/Princ
 chmod +x /home/cpi/apps/launcher/Menu/GameShell/Prince.sh
 ```
 
-5. Reboot GameShell and start Prince Of Persia by selecting the Prince icon
+5. Copy the prince icon
+```
+cp /home/cpi/SDLPoP/Prince.png /home/cpi/apps/launcher/skin/default/Menu/GameShell/Prince.png
+```
+
+6. Reboot GameShell and start Prince Of Persia by selecting the Prince icon
 
 ## GameShell Controls
 
